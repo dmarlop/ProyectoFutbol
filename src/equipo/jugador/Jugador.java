@@ -1,6 +1,6 @@
 package equipo.jugador;
 
-import actividad1.zoo.Animal;
+
 
 public abstract class Jugador {
 
@@ -63,4 +63,4 @@ public abstract class Jugador {
 }
 
 
-}
+
