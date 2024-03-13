@@ -11,6 +11,12 @@ public abstract class Jugador {
 	private String equipo;
 	
 	
+	public Jugador (String nombre, int dorsal, String equipo) {
+		this.nombre = nombre;
+		this.dorsal = dorsal;
+		this.equipo = equipo;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -45,7 +51,7 @@ public abstract class Jugador {
 	
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + this.nombre + ", dorsal y equipo: " + this.equipo + "]";
+		return "Soy un jugador de futbol, sin posición por definir";
 	}
 	
 	@Override
