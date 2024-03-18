@@ -2,7 +2,7 @@ package equipo.jugador.centroCampista;
 
 import equipo.jugador.Jugador;
 
-public class CentroCampista extends Jugador {
+public abstract class CentroCampista extends Jugador {
     private int pasesCompletados;
 
     public CentroCampista(String nombre, int dorsal, String equipo, int pasesCompletados) {
@@ -41,4 +41,3 @@ public class CentroCampista extends Jugador {
         return getNombre().equals(otroCentrocampista.getNombre()) && getDorsal() == otroCentrocampista.getDorsal() && getEquipo().equals(otroCentrocampista.getEquipo()) && pasesCompletados == otroCentrocampista.pasesCompletados;
     }
 }
-
