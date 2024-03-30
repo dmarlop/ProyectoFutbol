@@ -27,16 +27,18 @@ public class Mediapunta extends CentroCampista {
 
     @Override
     public String toString() {
-    	 return "Portero [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo() + ", asistencias=" + asistencias + "]";
+        return "Mediapunta [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo() + ", pasesCompletados=" + getPasesCompletados() + ", asistencias=" + getAsistencias() + "]";
     }
+
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (!(obj instanceof Mediapunta))
-            return false;
-        Mediapunta otroMediapunta = (Mediapunta) obj;
-        return getNombre().equals(otroMediapunta.getNombre()) && getDorsal() == otroMediapunta.getDorsal() && getEquipo().equals(otroMediapunta.getEquipo()) && asistencias == otroMediapunta.asistencias;
-    }
+    	Mediapunta otroMediapunta = (Mediapunta) obj;
+		  boolean result = false;
+		  
+		  if(super.equals(obj) && this.asistencias == otroMediapunta.asistencias) {
+			  result = true;
+		  }
+		  return result;
+	  }
 }

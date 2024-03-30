@@ -26,16 +26,18 @@ public class Pivote extends CentroCampista {
 
     @Override
     public String toString() {
-    	 return "Portero [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo()  + ", intercepciones=" + intercepciones + "]";
+        return "Pivote [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo() + ", pasesCompletados=" + getPasesCompletados() + ", intercepciones=" + getIntercepciones() + "]";
     }
 
+
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (!(obj instanceof Pivote))
-            return false;
-        Pivote otroPivote = (Pivote) obj;
-        return getNombre().equals(otroPivote.getNombre()) && getDorsal() == otroPivote.getDorsal() && getEquipo().equals(otroPivote.getEquipo()) && intercepciones == otroPivote.intercepciones;
-    }
+	  public boolean equals(Object obj) {
+    	Pivote otroPivote = (Pivote) obj;
+		  boolean result = false;
+		  
+		  if(super.equals(obj) && this.intercepciones == otroPivote.intercepciones) {
+			  result = true;
+		  }
+		  return result;
+	  }
 }
