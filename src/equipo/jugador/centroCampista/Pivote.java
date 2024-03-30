@@ -26,7 +26,7 @@ public class Pivote extends CentroCampista {
 
     @Override
     public String toString() {
-        return "Pivote [nombre=" + getNombre() + ", dorsal y equipo: " + getEquipo() + ", intercepciones=" + intercepciones + "]";
+    	 return "Portero [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo()  + ", intercepciones=" + intercepciones + "]";
     }
 
     @Override

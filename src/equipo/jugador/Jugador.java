@@ -10,58 +10,68 @@ public abstract class Jugador {
 	private int dorsal;
 	private String equipo;
 	
-	
 	public Jugador (String nombre, int dorsal, String equipo) {
+		
 		this.nombre = nombre;
-		this.dorsal = dorsal;
+		setDorsal(dorsal);
 		this.equipo = equipo;
+		
 	}
 	
-	public String getNombre() {
-		return nombre;
+	public Jugador (String nombre, String equipo) {
+		
+		this.nombre = nombre;
+		this.dorsal = 99;
+		this.equipo = equipo;
+		
 	}
+	
 
+	public String getNombre() {
+		return this.nombre;
+	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
 	public int getDorsal() {
-		return dorsal;
+		return this.dorsal;
 	}
-
+	
 	public void setDorsal(int dorsal) {
+		if(dorsal >= 100) {
+			throw new IllegalArgumentException("Error: No puedes asignar un dorsal de 3 cifras.");
+		}
 		this.dorsal = dorsal;
+		
 	}
-
-
-
+	
 	public String getEquipo() {
-		return equipo;
+		return this.equipo;
 	}
-
-
-
+	
 	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
-
-
-
+	
 	public abstract void mostrarDatos();
 	
-	@Override
-	public String toString() {
-		return "Soy un jugador de futbol, sin posición por definir";
-	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public abstract String toString ();
+	
+	
+	@Override
+	public boolean equals (Object obj) {
 		Jugador nuevoJugador = (Jugador) obj;
-
 		boolean result = false;
-
-		if (this.nombre == nuevoJugador.nombre && this.dorsal == nuevoJugador.dorsal && this.equipo == nuevoJugador.equipo) {
+		
+		if(this.dorsal == nuevoJugador.getDorsal() && 
+				this.nombre.equals(nuevoJugador.getNombre()) && 
+				this.equipo.equals(nuevoJugador.getEquipo())) {
 			result = true;
+			
 		}
 		return result;
 	}
