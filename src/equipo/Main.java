@@ -3,6 +3,7 @@ package equipo;
 import equipo.jugador.Jugador;
 import equipo.jugador.centroCampista.Mediapunta;
 import equipo.jugador.centroCampista.Pivote;
+import equipo.jugador.delantero.DelanteroCentro;
 import equipo.jugador.portero.Portero;
 
 public class Main {
@@ -33,7 +34,8 @@ public class Main {
 		}
 		
 		
-		
+		DelanteroCentro dc = new DelanteroCentro("Pablo", 3, "R.Madrid", 0, 0);
+		System.out.println(dc.toString());
 		
 
 }
