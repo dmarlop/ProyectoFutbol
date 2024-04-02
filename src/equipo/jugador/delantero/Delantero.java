@@ -30,7 +30,7 @@ public abstract class Delantero extends Jugador {
 
     @Override
     public String toString() {
-        return "Delantero [nombre=" + getNombre() + ", dorsal=" + getDorsal() + ", equipo=" + getEquipo() + ", goles=" + getGoles() + "]";
+        return "Delantero [nombre=" + getNombre() + ", dorsal=" + getDorsal() + ", equipo=" + getEquipo() + ", goles=" + this.goles + "]";
     }
 
     @Override

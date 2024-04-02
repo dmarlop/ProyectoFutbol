@@ -25,7 +25,7 @@ public class DelanteroCentro extends Delantero{
 	
 	  @Override
 	    public String toString() {
-	        return "DelanteroCentro [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo() + ", goles=" + getGoles() + ", golesDePenalti=" + getGolesDePenalti() + "]";
+	        return "DelanteroCentro [nombre=" + getNombre() + ", dorsal " + getDorsal() + " y equipo: " + getEquipo() + ", goles=" + getGoles() + ", GolesDePenalti +"+ this.golesDePenalti + "]";
 	    }
 	  
 	  

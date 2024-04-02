@@ -24,7 +24,7 @@ public class Extremo extends Delantero{
 	
 	 @Override
 	 public String toString() {
-	        return  super.toString() + "puesto =" + getPuesto() ;
+	        return  super.toString() + "puesto =" + this.puesto ;
 	    }
 	 
 	 @Override
