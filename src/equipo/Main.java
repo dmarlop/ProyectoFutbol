@@ -4,6 +4,7 @@ import equipo.jugador.Jugador;
 import equipo.jugador.centroCampista.Mediapunta;
 import equipo.jugador.centroCampista.Pivote;
 import equipo.jugador.delantero.DelanteroCentro;
+import equipo.jugador.delantero.Extremo;
 import equipo.jugador.portero.Portero;
 
 public class Main {
@@ -24,8 +25,12 @@ public class Main {
 		Mediapunta j8 = new Mediapunta("Ejemplo", 9, "Betis", 160, 80);
 		Pivote j6 = new Pivote("Ejemplo pivote 1", 10, "Barcelona", 80, 5);
 		Pivote j7 = new Pivote("Ejemplo pivote 2", 11, "Barcelona", 80, 5);
+		DelanteroCentro dc = new DelanteroCentro("Pablo", 9, "R.Madrid", 0, 0);
+		System.out.println(dc.toString());
+		Extremo ex = new Extremo("Morales", 7, "R.Madrid", 1,"IZQUIERDO");
+		System.out.println(ex.toString());
 		
-		Jugador[] jugadores = {j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11};
+		Jugador[] jugadores = {j1,j2,j3,j4,j5,j6,j7,j8,j9,ex,dc};
 		
 		Equipo e1 = new Equipo(jugadores);
 		
@@ -34,8 +39,7 @@ public class Main {
 		}
 		
 		
-		DelanteroCentro dc = new DelanteroCentro("Pablo", 3, "R.Madrid", 0, 0);
-		System.out.println(dc.toString());
+		
 		
 
 }

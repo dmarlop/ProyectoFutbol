@@ -11,7 +11,7 @@ public abstract class Delantero extends Jugador {
 		this.goles = goles;
 	}
 
-	public int getGoles() {
+	public int getGoles() { 
 		return goles;
 	}
 
